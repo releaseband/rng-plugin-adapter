@@ -7,4 +7,5 @@ type RNG interface {
 type Random interface {
 	RNG
 	SetSeed(seed int64)
+	RandomData(n uint) []byte
 }
