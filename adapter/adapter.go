@@ -9,3 +9,8 @@ type Random interface {
 	RNG
 	SetSeed(seed int64)
 }
+
+type RngPool interface {
+	Get() (RNG, int64, error)
+	Put(rng RNG)
+}
